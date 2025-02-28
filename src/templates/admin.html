@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Carrito {% endblock %}
+
+{% block body %}
+
+<h1>Carrito</h1>
+
+{% for usuario in usuarios %}
+
+    <div>
+    
+        <h4>{{ usuario['username'] }}</h4>
+        <h5> {{ usuario['email'] }}</h5>
+        <h5> {{ usuario['contador_visitas'] }}</h5>
+        <h5> {{ usuario['carrito'] }}</h5>
+
+
+    </div>    
+{% endfor %}
+{% endblock %}

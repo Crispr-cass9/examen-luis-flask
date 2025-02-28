@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Mi Perfil {% endblock %}
+
+{% block body %}
+<header>                                                                                                 
+    <a href="/">Home</a>
+    <div class="header_derecha">
+        <a href="{{ header[0]['ruta']}}">{{ header[0]['nombre'] }}</a>
+        <a href="{{ header[1]['ruta']}}">{{ header[1]['nombre'] }}</a>
+    </div>
+<h2>Welcome {{ user['username'] }}</h2>
+<h3>Contador de visitas {{ user['contador_visitas'] }}</h3>                                 
+<a href="/tienda">Ir a la tienda</a>
+{% endblock %}

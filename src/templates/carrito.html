@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Carrito {% endblock %}
+
+{% block body %}
+
+<h1>Carrito</h1>
+
+{% for producto in carrito %}
+
+    <a href="/producto/{{ producto['_id'] }}" class="producto flex-wrap">
+    
+        <h4>{{ producto['nombre'] }}</h4>
+        <h5> {{ producto['precio'] }}</h5>
+
+    </a>    
+{% endfor %}
+{% endblock %}

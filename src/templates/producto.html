@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ producto['nombre'] }} {% endblock %}
+
+{% block body %}
+    <h1> Página del producto </h1>
+    <h2> Nombre: {{ producto['nombre'] }} </h2>
+    <h2> Precio: {{ producto['precio'] }} </h2>
+    <a href="/anyadir/{{ producto['_id'] }}">Añadir a carrito</a>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Registrarse {% endblock %}
+
+{% from 'bootstrap4/form.html' import render_form %}
+{% from 'bootstrap4/utils.html' import render_messages %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
+{% block body%}
+
+<header>                                                                                                 
+  <a href="/">Home</a>
+  <div class="header_derecha">
+      <a href="{{ header[0]['ruta']}}">{{ header[0]['nombre'] }}</a>
+      <a href="{{ header[1]['ruta']}}">{{ header[1]['nombre'] }}</a>
+  </div>
+</header>
+
+  <h4>{{ render_messages() }}</h4>
+  <h3>{{ render_form(form, action='/registrar_usuario', method='post') }}</h3>
+
+{% endblock %}

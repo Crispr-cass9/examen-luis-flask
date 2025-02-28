@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Inicio {% endblock %}
+
+{% from 'bootstrap4/form.html' import render_form %}
+{% from 'bootstrap4/utils.html' import render_messages %}
+
+{% block body %}
+
+<header>                                                                                                 
+    <a href="/">Home</a>
+    <div class="header_derecha">
+        <a href="{{ header[0]['ruta']}}">{{ header[0]['nombre'] }}</a>
+        <a href="{{ header[1]['ruta']}}">{{ header[1]['nombre'] }}</a>
+    </div>
+</header>
+
+<h1> Welcome to the page </h1>
+
+<a href="/login">Empecemos</a> 
+
+{% endblock %}
